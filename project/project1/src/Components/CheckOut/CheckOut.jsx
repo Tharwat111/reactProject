@@ -32,7 +32,7 @@ export default function CheckOut({totalPrice}) {
       })
   async function payOnline(values) {
     try {
-        let {data}=await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cart.cartId}?url=http://localhost:5173`,
+        let {data}=await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cart.cartId}?url=${window.location.origin}`,
             {
                 shippingAddress: values,
                 

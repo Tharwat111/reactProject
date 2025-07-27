@@ -22,9 +22,9 @@ export default function Navbar() {
   return (
     <div className="bg-mainLight py-10 shadow-2xl">
       <div className="container flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-nowrap text-darkPrimary">
+        <h1 className="text-2xl font-bold text-nowrap text-darkPrimary">
           <a href="/">
-            <i class="fa-brands fa-opencart text-primary mr-2">
+            <i className="fa-brands fa-opencart text-primary mr-2">
             </i>
             <span>FreshCart</span>
           </a>

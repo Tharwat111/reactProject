@@ -11,7 +11,7 @@ import Brands from './Pages/Brands/Brands'
 import Login from './Pages/Login/Login'
 import Register from './Pages/Register/Register'
 import Home from './Pages/Home/Home'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import AllOrders from './Pages/AllOrders/AllOrders'
 import toast ,{Toaster} from 'react-hot-toast'
 import ProtectedRoutes from './Protected/ProtectedRoutes'
@@ -28,12 +28,11 @@ import WishlistContextProvider from './Context/WishListContext';
 import WishList from './Pages/WishList/WishList'
 import CategoryProducts from './Pages/CategoryProducts/CategoryProducts'
 import BrandProducts from './Pages/BrandProducts/BrandProducts'
-
-
 function App() {
   let routes=createBrowserRouter(
     [
       {path:'/',element: <Layout/>,children:[
+        {path: '/', element: <Navigate to="/Home"/> },
         {path:'/Home',element:(<ProtectedRoutes><Home/></ProtectedRoutes>)},
         {path:'/Products',element:(<ProtectedRoutes><Products/></ProtectedRoutes>)},
         {path:'/ProductDetails/:id',element:(<ProtectedRoutes><ProductDetails/></ProtectedRoutes>)},
