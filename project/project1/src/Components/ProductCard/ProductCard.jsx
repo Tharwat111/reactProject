@@ -17,9 +17,9 @@ export default function ProductCard({ item }) {
       className="productCard group flex flex-col gap-3 shadow-xl rounded-md overflow-hidden aos-init aos-animate"
     >
       <header className="relative">
-        <a href={`/product/${item._id}`}>
+        <Link to={`/ProductDetails/${item.id}`}>
           <img src={item.imageCover} className="w-full" alt={item.title} />
-        </a>
+        </Link>
         <div className="layer -translate-y-1/2 flex justify-center items-center gap-4 absolute top-1/2 left-1/2 -translate-x-1/2">
           <div
             onClick={() => {
